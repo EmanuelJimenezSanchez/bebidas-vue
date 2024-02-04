@@ -9,9 +9,11 @@ import {
 } from '@headlessui/vue'
 import { useModalStore } from '../stores/modal'
 import { useBebidasStore } from '../stores/bebidas'
+import { useFavoritosStore } from '../stores/favoritos'
 
 const modal = useModalStore()
 const bebidas = useBebidasStore()
+const favoritos = useFavoritosStore()
 
 const formatearIngredientes = () => {
   const ingredientesDiv = document.createElement('DIV')
@@ -105,13 +107,21 @@ const formatearIngredientes = () => {
                 <p class="text-md text-gray-500">{{ bebidas.receta.strInstructions }}</p>
               </div>
 
-              <div class="mt-4">
+              <div class="mt-6 flex justify-between">
                 <button
                   type="button"
-                  class="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 mt-4"
+                  class="inline-flex justify-center items-center rounded-md border border-transparent bg-gray-100 px-5 py-3 text-sm font-medium text-gray-500 border-gray-300 hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2"
                   @click="modal.handleClickModal()"
                 >
                   Cerrar Receta
+                </button>
+
+                <button
+                  type="button"
+                  class="inline-flex justify-center items-center rounded-md border border-transparent bg-orange-600 px-5 py-2 text-sm font-medium text-white hover:bg-orange-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
+                  @click="favoritos.handleClickFavorito()"
+                >
+                  Agregar a Favoritos
                 </button>
               </div>
             </DialogPanel>
