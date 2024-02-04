@@ -29,15 +29,15 @@
             <img 
               src="/img/logo.svg" 
               alt="Logotipo"
-              class="w-32"  
+              class="w-32 aspect-[128/111.8]"  
             />
           </RouterLink>
         </div>
 
-        <nav class="flex gap-4">
+        <nav class="flex gap-4 text-white">
           <RouterLink
             :to="{ name: 'inicio' }"
-            class="text-white uppercase foont-bold"
+            class="uppercase foont-bold"
             active-class="text-orange-500"
           >
             Inicio
@@ -45,7 +45,7 @@
 
           <RouterLink
             :to="{ name: 'favoritos' }"
-            class="text-white uppercase foont-bold"
+            class="uppercase foont-bold"
             active-class="text-orange-500"
           >
             Favoritos

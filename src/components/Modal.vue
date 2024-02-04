@@ -68,7 +68,7 @@ const formatearIngredientes = () => {
             leave-to="opacity-0 scale-95"
           >
             <DialogPanel
-              class="w-full max-w-xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
+              class="w-full max-w-xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all flex flex-col gap-8"
             >
               <div class="flex flex-col gap-4">
                 <DialogTitle
@@ -85,7 +85,7 @@ const formatearIngredientes = () => {
                 />
               </div>
               
-              <div class="mt-4 flex flex-col gap-2">
+              <div class="flex flex-col gap-2">
                 <DialogTitle
                   as="h3"
                   class="text-2xl font-extrabold leading-6 text-gray-900"
@@ -96,7 +96,7 @@ const formatearIngredientes = () => {
                 <div v-html="formatearIngredientes().outerHTML"></div>
               </div>
 
-              <div class="mt-4 flex flex-col gap-2">
+              <div class="flex flex-col gap-2">
                 <DialogTitle
                   as="h3"
                   class="text-2xl font-extrabold leading-6 text-gray-900"
@@ -107,7 +107,7 @@ const formatearIngredientes = () => {
                 <p class="text-md text-gray-500">{{ bebidas.receta.strInstructions }}</p>
               </div>
 
-              <div class="mt-6 flex justify-between">
+              <div class="flex justify-between">
                 <button
                   type="button"
                   class="inline-flex justify-center items-center rounded-md border border-transparent bg-gray-100 px-5 py-3 text-sm font-medium text-gray-500 border-gray-300 hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2"
