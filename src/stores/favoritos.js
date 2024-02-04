@@ -21,17 +21,25 @@ export const useFavoritosStore = defineStore('favoritos', () => {
     localStorage.setItem('favoritos', JSON.stringify(favoritos.value))
   }
   
-  function existeFavorito (id) {
+  function existeFavorito () {
     const favoritosLocal = JSON.parse(localStorage.getItem('favoritos')) ?? []
   
-    return favoritosLocal.some(favorito => favorito.idDrink === id)
+    return favoritosLocal.some(favorito => favorito.idDrink === bebidas.receta.idDrink)
+  }
+
+  function eliminarFavorito () {
+    favoritos.value = favoritos.value.filter(favorito => favorito.idDrink !== bebidas.receta.idDrink)
+  }
+
+  function agregarFavorito () {
+    favoritos.value.push(bebidas.receta)
   }
 
   function handleClickFavorito() {
-    if (existeFavorito(bebidas.receta.idDrink)) {
-      console.log('Ya existe en favoritos')
+    if (existeFavorito()) {
+      eliminarFavorito()
     } else {
-      favoritos.value.push(bebidas.receta)
+      agregarFavorito()
     }
   }
 
