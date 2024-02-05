@@ -110,7 +110,7 @@ const formatearIngredientes = () => {
               <div class="flex justify-between">
                 <button
                   type="button"
-                  class="inline-flex justify-center items-center rounded-md border border-transparent bg-gray-100 px-5 py-3 text-sm font-medium text-gray-500 border-gray-300 hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2"
+                  class="justify-center items-center rounded-md border border-transparent bg-gray-100 px-5 py-3 text-sm font-medium text-gray-500 border-gray-300 hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2"
                   @click="modal.handleClickModal()"
                 >
                   Cerrar Receta
@@ -118,7 +118,7 @@ const formatearIngredientes = () => {
 
                 <button
                   type="button"
-                  class="inline-flex justify-center items-center rounded-md border border-transparent bg-orange-600 px-5 py-2 text-sm font-medium text-white hover:bg-orange-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
+                  class="justify-center items-center rounded-md border border-transparent bg-orange-600 px-5 py-2 text-sm font-medium text-white hover:bg-orange-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
                   @click="favoritos.handleClickFavorito()"
                 >
                   {{ modal.textoBoton }}

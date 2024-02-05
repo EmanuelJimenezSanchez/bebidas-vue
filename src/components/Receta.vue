@@ -15,7 +15,7 @@
   <div class="border shadow-lg">
     <div class="overflow-hidden">
       <img 
-        class="hover:scale-110 transition-transform hover:rotate-2"
+        class="hover:scale-110 transition-transform hover:rotate-2 aspect-[346.4/346.4]"
         :src="receta.strDrinkThumb" 
         :alt="'Imagen de ' + receta.strDrink"
       >
